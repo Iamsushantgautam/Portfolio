@@ -586,17 +586,8 @@ img {
 
 .qualification__tabs {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
   margin-bottom: var(--mb-2);
-  background-color: var(--container-color);
-  padding: 0.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: max-content;
-  margin: 0 auto var(--mb-2);
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .qualification__button {
@@ -688,17 +679,7 @@ img {
 }
 
 .qualification__button.qualification__active {
-  background-color: var(--first-color);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.qualification__content {
-  position: relative;
-  background-color: var(--container-color);
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  color: var(--first-color);
 }
 
 /*================= Services ==================*/
