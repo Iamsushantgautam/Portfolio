@@ -210,45 +210,59 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-/*==================== NAV LINKS TO QUALIFICATION TABS ====================*/
-const navLinksCustom = document.querySelectorAll('.nav__link');
+/*==================== SMOOTH SCROLL & CLEAN URL FOR ALL NAV LINKS ====================*/
+const allNavLinks = document.querySelectorAll('.nav__link');
 
-navLinksCustom.forEach(link => {
+allNavLinks.forEach(link => {
   link.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent hash from being added to URL
+
     const href = link.getAttribute('href');
+
+    // Determine the target section
+    let targetId = href;
+    let shouldClickTab = false;
+
+    // Special handling for Qualification tabs
     if (href === '#trainings' || href === '#work' || href === '#education') {
-      e.preventDefault();
-
-      // Scroll to qualification section
-      const qualificationSection = document.getElementById('qualification');
-      if (qualificationSection) {
-        // Calculate header height to offset scroll
-        const header = document.getElementById('header');
-        const headerOffset = header ? header.offsetHeight : 0;
-        const elementPosition = qualificationSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
-
-      // Activate the correct tab
-      const tabButton = document.querySelector(`[data-target="${href}"]`);
-      if (tabButton) {
-        tabButton.click();
-      }
-
-      // Close mobile menu
-      const navMenu = document.getElementById('nav-menu');
-      if (navMenu) {
-        navMenu.classList.remove('show-menu');
-      }
-
-      // Manually update active link immediately for responsiveness
-      document.querySelectorAll('.nav__link').forEach(l => l.classList.remove('active-link'));
-      link.classList.add('active-link');
+      targetId = '#qualification';
+      shouldClickTab = true;
     }
+
+    // Handle empty or top links
+    if (targetId === '#') targetId = '#home';
+
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      // Calculate header height to offset scroll
+      const header = document.getElementById('header');
+      const headerOffset = header ? header.offsetHeight : 0;
+      const elementPosition = targetSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // If it served as a tab switch, click the tab button
+      if (shouldClickTab) {
+        const tabButton = document.querySelector(`[data-target="${href}"]`);
+        if (tabButton) {
+          tabButton.click();
+        }
+      }
+    }
+
+    // Close mobile menu
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+      navMenu.classList.remove('show-menu');
+    }
+
+    // Manually update active link
+    document.querySelectorAll('.nav__link').forEach(l => l.classList.remove('active-link'));
+    link.classList.add('active-link');
   });
 });
