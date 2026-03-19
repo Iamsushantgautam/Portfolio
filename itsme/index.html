@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushant Gautam | MERN Stack & Shopify Developer Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Sushant Gautam - Professional MERN Stack and Shopify Developer. Explore my portfolio, projects, and connect with me for web development services.">
+    <meta name="keywords"
+        content="Sushant Gautam, MERN Stack Developer, Shopify Developer, Web Development, React Developer, Full Stack Portfolio">
+    <meta name="author" content="Sushant Gautam">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Sushant Gautam | Portfolio">
+    <meta property="og:description" content="MERN Stack & Shopify Developer specializing in modern web solutions.">
+    <meta property="og:url" content="https://sushant.online/itsme">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="../assets/img/mypic2.jpg" />
+
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="super-profile-container">
+        <div class="super-profile-content">
+            <!-- Curved Header Background -->
+            <div class="super-profile-header-bg"></div>
+
+            <!-- Main Content Area -->
+            <div class="super-profile-main">
+                <!-- Profile Image Section -->
+                <div class="super-avatar-container">
+                    <img src="../assets/img/about2.jpg" alt="Sushant Gautam - MERN Stack Developer" class="super-avatar"
+                        id="profile-img" />
+                </div>
+
+                <!-- Welcome Message Section -->
+                <div class="super-welcome-section">
+                    <h1 class="super-name">Welcome</h1>
+                    <h2 class="super-subtitle">I am Sushant Gautam</h2>
+                    <p class="super-title">MERN Stack Developer &amp; Shopify Developer</p>
+                </div>
+
+                <!-- Important Links Section -->
+                <div class="super-links-container">
+                    <a href="https://sushant.online" target="_blank" rel="noreferrer" class="super-link-btn">
+                        <i class="fas fa-globe" style="color: #10b981;"></i> My Portfolio
+                    </a>
+                    <a href="https://www.fiverr.com/sushantkumardev" target="_blank" rel="noreferrer"
+                        class="super-link-btn">
+                        <i class="fas fa-handshake" style="color: #1dbf73;"></i> Hire me on Fiverr
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Media Links Section -->
+            <div class="super-social-container">
+                <a href="javascript:void(0)" class="super-social-icon" title="Email" id="email-modal-trigger">
+                    <i class="far fa-envelope" style="color: #20364d;"></i> <!-- Outline envelope -->
+                </a>
+                <a href="https://www.linkedin.com/in/iamushantgautam" target="_blank" rel="noreferrer"
+                    class="super-social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin" style="color: #0077b5;"></i> <!-- Solid linkedin -->
+                </a>
+                <!-- <a href="https://www.youtube.com/@witcet" target="_blank" rel="noreferrer" class="super-social-icon"
+                    title="YouTube">
+                    <i class="fab fa-youtube" style="color: #ff0000;"></i> -->
+                </a>
+                <a href="https://www.instagram.com/its_sushant01/" target="_blank" rel="noreferrer"
+                    class="super-social-icon" title="Instagram">
+                    <i class="fab fa-instagram" style="color: #e4405f;"></i>
+                </a>
+                <a href="https://github.com/iamsushantgautam" target="_blank" rel="noreferrer" class="super-social-icon"
+                    title="GitHub">
+                    <i class="fab fa-github" style="color: #333333;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-envelope-open-text modal-icon"></i>
+                <h2 class="modal-title">Get in Touch</h2>
+                <p class="modal-subtitle">I'll get back to you as soon as possible</p>
+            </div>
+
+            <form id="profile-contact-form" action="https://formsubmit.co/iamsushantgautam@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New message from Profile Page!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <input type="text" name="name" id="modal-name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="modal-email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="modal-message" placeholder="Describe your project or just say hi!"
+                        rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+                <div id="form-status" class="status-msg"></div>
+            </form>
+
+            <div class="modal-divider">
+                <span>OR</span>
+            </div>
+
+            <a href="mailto:iamsushantgautam@gmail.com" class="gmail-btn"
+                title="Send email to Sushant Gautam via Gmail">
+                <i class="fab fa-google"></i> Contact via Gmail
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
