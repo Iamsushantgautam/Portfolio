@@ -128,7 +128,7 @@ function HeroSection() {
         <p className="intro-greeting">Full-Stack Developer</p>
         <div className="intro-chips">
           <span className="intro-chip chip-laravel">Laravel</span>
-          <span className="intro-chip chip-react">React</span>
+          <span className="intro-chip chip-react">MERN</span>
           <span className="intro-chip chip-shopify">Shopify</span>
         </div>
         {/* <p className="intro-title">Computer Science &amp; Engineering Student</p> */}
