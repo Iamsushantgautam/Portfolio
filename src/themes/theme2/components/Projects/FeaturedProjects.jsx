@@ -37,7 +37,7 @@ export default function FeaturedProjects() {
           <div className="theme2-projects-header">
             <div>
               <span className="theme2-section-eyebrow">FEATURED PROJECTS</span>
-              <h2 className="theme2-section-title">Selected Work</h2>
+              <h2 className="theme2-section-title">Projects</h2>
             </div>
           </div>
 

@@ -5,11 +5,14 @@ import { SiFiverr } from 'react-icons/si'
 import { Copy, CheckCircle2 } from 'lucide-react'
 import sushantCV from '../../../assets/SushantCV.pdf'
 import '../styles/FooterSection.css'
+import portfolioData from '../../../data/portfolio.json'
 
 function FooterSection() {
   const [copied, setCopied] = useState(false)
   const [currentTime, setCurrentTime] = useState('')
   const containerRef = useRef(null)
+
+  const { personalInfo, fiverr } = portfolioData || {}
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -20,7 +23,7 @@ function FooterSection() {
   const xMove = useTransform(scrollYProgress, [0, 1], [-100, 200])
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('iamsushantgautam@gmail.com')
+    navigator.clipboard.writeText(personalInfo?.email || 'iamsushantgautam@gmail.com')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -67,24 +70,32 @@ function FooterSection() {
 
           <div className="social-icons-group">
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/iamushantgautam" target="_blank" rel="noreferrer" className="social-circle circle-linkedin">
-              <FaLinkedinIn />
-            </a>
+            {personalInfo?.linkedin && (
+              <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="social-circle circle-linkedin">
+                <FaLinkedinIn />
+              </a>
+            )}
 
             {/* Github */}
-            <a href="https://github.com/iamsushantgautam" target="_blank" rel="noreferrer" className="social-circle circle-github">
-              <FaGithub />
-            </a>
+            {personalInfo?.github && (
+              <a href={personalInfo.github} target="_blank" rel="noreferrer" className="social-circle circle-github">
+                <FaGithub />
+              </a>
+            )}
 
             {/* Instagram */}
-            <a href="https://www.instagram.com/its_sushant01/" target="_blank" rel="noreferrer" className="social-circle circle-instagram">
-              <FaInstagram />
-            </a>
+            {personalInfo?.instagram && (
+              <a href={personalInfo.instagram} target="_blank" rel="noreferrer" className="social-circle circle-instagram">
+                <FaInstagram />
+              </a>
+            )}
 
             {/* Fiverr */}
-            {/* <a href="https://www.fiverr.com/sushantkumardev" target="_blank" rel="noreferrer" className="social-circle circle-fiverr">
-              <SiFiverr />
-            </a> */}
+            {fiverr?.link && (
+              <a href={fiverr.link} target="_blank" rel="noreferrer" className="social-circle circle-fiverr">
+                <SiFiverr />
+              </a>
+            )}
           </div>
         </motion.div>
 
@@ -99,15 +110,20 @@ function FooterSection() {
           <span className="contact-eyebrow">Looking for a new talent?</span>
 
           <div className="contact-email-wrapper">
-            <span className="contact-email">iamsushantgautam@gmail.com</span>
+            <span className="contact-email">{personalInfo?.email || 'iamsushantgautam@gmail.com'}</span>
             <button className="copy-btn" onClick={handleCopy} aria-label="Copy Email">
               {copied ? <CheckCircle2 color="#4ade80" size={24} /> : <Copy size={24} />}
             </button>
           </div>
 
           <div className="contact-links" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <a href="https://www.linkedin.com/in/iamushantgautam" target="_blank" rel="noreferrer">LinkedIn</a>
-            <span>•</span> <a href={sushantCV} download="Sushant_CV.pdf">Download CV</a>
+            {personalInfo?.linkedin && (
+              <>
+                <a href={personalInfo.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+                <span>•</span>
+              </>
+            )}
+            <a href={sushantCV} download="Sushant_CV.pdf">Download CV</a>
             <span>•</span> <a href="/shopifystore">Shopify Store</a>
             <span>•</span> <a href="/portfolios">Portfolios Showcase</a>
           </div>

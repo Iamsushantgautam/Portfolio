@@ -13,7 +13,7 @@
     "email": "iamsushantgautam@gmail.com",
     "phone": "+91-6393958548",
     "github": "https://github.com/Iamsushantgautam",
-    "linkedin": "https://www.linkedin.com/in/sushantgautam2507",
+    "linkedin": "https://www.linkedin.com/in/iamushantgautam",
     "instagram": "https://www.instagram.com/sushant.webdev/",
     "quote": "Code is not just what you build, it's how it makes you feel.",
     "description": "I'm a passionate Full Stack Developer who loves building impactful web applications. I enjoy turning ideas into real products and continuously learning new technologies."
@@ -51,11 +51,19 @@
   },
   "education": [
     {
-      "type": "College",
+      "type": "Post Graduation",
+      "institution": "Maharishi University of Information Technology",
+      "period": "2026-2028",
+      "specialization": "M.Tech in Computer Science & Engineering",
+      "grade": "Currently pursuing",
+      "icon": "GraduationCap"
+    },
+    {
+      "type": "Graduation",
       "institution": "B.N College of Engineering and Technology, Lucknow",
-      "period": "2022 - 2026",
+      "period": "Completed 2026",
       "specialization": "B.Tech in Computer Science & Engineering",
-      "grade": "8.34 CGPA",
+      "grade": "8.32 CGPA",
       "icon": "GraduationCap"
     },
     {
@@ -81,16 +89,19 @@
       "title": "Web Specialist Intern",
       "company": "GrrowEzy, Remote, Bengaluru",
       "period": "Nov 2025 - Present",
-      "description": "Specializing in Laravel application development, custom Shopify setups, branding assets, and UI/UX optimization for e-commerce.",
+      "description": "Developed full-stack web applications using React.js, Node.js, Express.js, Laravel, PHP, MongoDB, and MySQL. Custom Shopify setups, branding assets, and UI/UX optimization for e-commerce.",
       "summary": [
-        "Designed and optimized Shopify store layouts, visuals, and branding assets",
-        "Developed scalable web applications utilizing Laravel MVC architecture",
-        "Optimized MySQL databases, queries, and relational data structures for peak performance",
-        "Implemented secure user authentication and role-based access control (RBAC)",
-        "Integrated payment gateways, transaction services, and third-party APIs",
-        "Delivered 50+ conversion-focused e-commerce assets for landing and product pages",
-        "Collaborated in a remote team to architect and ship scalable web solutions",
-        "Enhanced user experience (UX) and conversion rate optimization (CRO) metrics"
+        "   Developed full-stack web applications using React.js, Node.js, Express.js, Laravel, PHP, MongoDB, and MySQL.",
+        "   Built responsive and reusable UI components using React.js, HTML, CSS, and JavaScript.",
+        "   Developed and integrated RESTful APIs using Node.js, Express.js, and Laravel.",
+        "   Designed and optimized Shopify store layouts, visuals, and branding assets",
+        "   Developed scalable web applications utilizing Laravel MVC architecture",
+        "   Optimized MySQL databases, queries, and relational data structures for peak performance",
+        "   Implemented secure user authentication and role-based access control (RBAC)",
+        "   Integrated payment gateways, transaction services, and third-party APIs",
+        "   Delivered 50+ conversion-focused e-commerce assets for landing and product pages",
+        "   Collaborated in a remote team to architect and ship scalable web solutions",
+        "   Enhanced user experience (UX) and conversion rate optimization (CRO) metrics"
       ]
     },
     {
@@ -202,7 +213,7 @@
       "img": "/assets/Projects/wittool.webp",
       "live": "https://wit-tools.sushant.online",
       "github": "https://github.com/Iamsushantgautam/Wit-Tools",
-      "tech": "React",
+      "tech": "React, JavaScript, HTML, CSS, PDF.js, jsPDF, HTML2Canvas, Tailwind CSS",
       "status": "on",
       "active": true
     },
