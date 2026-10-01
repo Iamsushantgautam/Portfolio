@@ -63,14 +63,20 @@ function ProjectItem({ project, index }) {
         <div className="plist-tech">
           <strong>Tools used:</strong> {project.tech}
         </div>
-        <div className="plist-btn-group">
-          <a href={project.live} target="_blank" rel="noreferrer" className="plist-btn live">
-            <Globe size={18} /> Preview
-          </a>
-          <a href={project.github} target="_blank" rel="noreferrer" className="plist-btn github">
-            <Github size={18} /> Github Code
-          </a>
-        </div>
+        {(project.live || project.github) && (
+          <div className="plist-btn-group">
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noreferrer" className="plist-btn live">
+                <Globe size={18} /> Preview
+              </a>
+            )}
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noreferrer" className="plist-btn github">
+                <Github size={18} /> Github Code
+              </a>
+            )}
+          </div>
+        )}
       </motion.div>
 
       <div className="plist-image-wrap">
